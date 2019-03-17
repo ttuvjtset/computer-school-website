@@ -1,0 +1,38 @@
+.logo {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.logo h1 {
+  font-size: 36px;
+}
+.logo h2 {
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+main {
+  font-family: 'Roboto', sans-serif;
+}
+.lead-text {
+  background: rgba(45, 63, 123, 0.44) !important;
+  color: white;
+}
+.lead-text h1 {
+  font-size: 30px;
+}
+.lead-image {
+  background-image: url("children-593313_1920.jpg");
+  background-size: cover;
+  min-height: 605px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.facts {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.facts .facts-image {
+  text-align: center;
+}
+.facts h2 {
+  color: #2D3F7A;
+  margin-bottom: 20px;
+}
