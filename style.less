@@ -1,55 +1,8 @@
-.logo {
-  font-family: 'Source Sans Pro', sans-serif;
+@header-color: #2D3F7A;
+@footer-color: #EBEBEB;
 
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 27px;
-    letter-spacing: 1px;
-  }
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-.lead-text {
-  background: rgba(45, 63, 123, 0.44) !important;
-  color: white;
-
-  h1 {
-    font-size: 30px;
-  }
-}
-
-.lead-image {
-  background-image: url("images/children-593313_1920.jpg");
-  background-size: cover;
-  min-height: 605px;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
-.facts-headline {
-  margin-top: 25px;
-  padding-top: 25px;
-
-  h2 {
-    color: #2D3F7A;
-    margin-bottom: 22px;
-    font-size: 26px;
-  }
-}
-
-.facts-main {
-  padding-bottom: 50px;
-
-  .facts-image {
-    text-align: center;
-  }
-}
+@tablet: ~"only screen and (min-width: 768px)";
+@phone: ~"(max-width: 767px)";
 
 .zero-side-margin {
   margin-right: 0 !important;
@@ -60,15 +13,113 @@ body {
   padding-left: 0 !important;
 }
 
-.main-block {
-  background-color: #f8f9fa;
+
+.logo {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  @media @phone {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+
+  @media @tablet {
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 27px;
+      letter-spacing: 0.7px;
+    }
+  }
 }
 
-.browse-all-button {
-  text-align: center;
-  margin-bottom: 25px;
+.navigation-style {
+  font-size: 19px;
+  font-weight: 600;
+  padding-right: 1.5rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.lead-image {
+  background-image: url("images/children-593313_1920.jpg");
+  background-size: cover;
+  min-height: 605px;
+  .zero-side-margin();
+
+  .lead-text {
+    background: rgba(45, 63, 123, 0.44) !important;
+    color: white;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  .lead-browse-all-courses-button {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
+.main-block {
+  background-color: #f8f9fa;
+  padding-top: 20px;
+
+  .facts-headline {
+    margin-top: 25px;
+    padding-top: 25px;
+
+    h2 {
+      color: @header-color;
+      margin-bottom: 22px;
+      font-size: 26px;
+    }
+  }
+
+  .facts-main {
+    padding-bottom: 50px;
+
+    .facts-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .browse-all-button {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer {
-  background-color: #EBEBEB;
+  background-color: @footer-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .copyright {
+    margin-bottom: 15px;
+
+  }
 }
+
