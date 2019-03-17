@@ -51,7 +51,7 @@ body {
 .navigation-style {
   font-size: 19px;
   font-weight: 600;
-  padding-right: 1.5rem;
+  padding-right: 1.5rem !important;
 }
 body {
   font-family: 'Roboto', sans-serif;
