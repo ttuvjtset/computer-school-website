@@ -1,8 +1,12 @@
 @header-color: #2D3F7A;
-@footer-color: #EBEBEB;
+@footer-color: #E8EBEE;
+@main-block-background: #ffffff !important;
+@page-background: #F7F8F9 !important;
 
-@tablet: ~"only screen and (min-width: 768px)";
+@pc: ~"only screen and (min-width: 992px)";
+@tablet: ~"only screen and (min-width: 768px) and (max-width: 991px)";
 @phone: ~"(max-width: 767px)";
+
 
 .zero-side-margin {
   margin-right: 0 !important;
@@ -13,6 +17,17 @@
   padding-left: 0 !important;
 }
 
+
+body {
+  background-color: @page-background;
+}
+
+
+.navbar-style {
+  background-color: @main-block-background;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 
 .logo {
   font-family: 'Source Sans Pro', sans-serif;
@@ -35,6 +50,17 @@
   }
 
   @media @tablet {
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 27px;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  @media @pc {
     h1 {
       font-size: 36px;
     }
@@ -78,7 +104,7 @@ body {
 }
 
 .main-block {
-  background-color: #f8f9fa;
+  background-color: @main-block-background;
   padding-top: 20px;
 
   .facts-headline {
@@ -131,3 +157,31 @@ body {
   }
 }
 
+.card-style {
+  background-color: white;
+}
+
+.course-card {
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .card-image {
+    text-align: center;
+  }
+
+  .card-details-block {
+    padding-top: 20px;
+
+    .card-detail-item {
+      margin-right: 12px;
+    }
+  }
+
+  .card-button-row {
+    padding-top: 10px;
+
+    .card-button {
+      text-align: right;
+    }
+  }
+}

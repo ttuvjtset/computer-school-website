@@ -5,6 +5,14 @@
 .zero-padding-left {
   padding-left: 0 !important;
 }
+body {
+  background-color: #F7F8F9 !important;
+}
+.navbar-style {
+  background-color: #ffffff !important;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .logo {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
@@ -22,7 +30,16 @@
     letter-spacing: 1px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .logo h1 {
+    font-size: 36px;
+  }
+  .logo h2 {
+    font-size: 27px;
+    letter-spacing: 0.7px;
+  }
+}
+@media only screen and (min-width: 992px) {
   .logo h1 {
     font-size: 36px;
   }
@@ -58,7 +75,7 @@ body {
   padding-top: 15px;
 }
 .main-block {
-  background-color: #f8f9fa;
+  background-color: #ffffff !important;
   padding-top: 20px;
 }
 .main-block .facts-headline {
@@ -82,7 +99,7 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  background-color: #EBEBEB;
+  background-color: #E8EBEE;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 15px;
@@ -99,5 +116,27 @@ body {
 }
 .footer .eu-funds-logo {
   padding-top: 10px;
+}
+.card-style {
+  background-color: white;
+}
+.course-card {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.course-card .card-image {
+  text-align: center;
+}
+.course-card .card-details-block {
+  padding-top: 20px;
+}
+.course-card .card-details-block .card-detail-item {
+  margin-right: 12px;
+}
+.course-card .card-button-row {
+  padding-top: 10px;
+}
+.course-card .card-button-row .card-button {
+  text-align: right;
 }
 /*# sourceMappingURL=style.css.map */
