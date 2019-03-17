@@ -10,8 +10,8 @@ body {
 }
 .navbar-style {
   background-color: #ffffff !important;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
 }
 .logo {
   font-family: 'Source Sans Pro', sans-serif;
@@ -138,5 +138,11 @@ body {
 }
 .course-card .card-button-row .card-button {
   text-align: right;
+}
+.contact-us-block {
+  padding-top: 25px;
+}
+.contact-us-block h5 {
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
