@@ -8,7 +8,7 @@
   font-size: 27px;
   letter-spacing: 1px;
 }
-main {
+body {
   font-family: 'Roboto', sans-serif;
 }
 .lead-text {
@@ -25,14 +25,25 @@ main {
   margin-right: 0px !important;
   margin-left: 0px !important;
 }
-.facts {
-  padding-top: 50px;
+.facts-headline {
+  margin-top: 25px;
+  padding-top: 25px;
+}
+.facts-headline h2 {
+  color: #2D3F7A;
+  margin-bottom: 22px;
+  font-size: 26px;
+}
+.facts-main {
   padding-bottom: 50px;
 }
-.facts .facts-image {
+.facts-main .facts-image {
   text-align: center;
 }
-.facts h2 {
-  color: #2D3F7A;
-  margin-bottom: 20px;
+.zero-side-margin {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.zero-padding-left {
+  padding-left: 0px !important;
 }
