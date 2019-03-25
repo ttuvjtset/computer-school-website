@@ -26,15 +26,15 @@
 <body>
 <div class="container">
 
-    <nav class="navbar navbar-expand-lg navbar-light align-items-end navbar-style">
+    <nav class="navbar navbar-expand-lg navbar-light align-items-end header">
         <a class="navbar-brand" href="index.html">
             <div class="row align-items-center">
                 <div class="col-4">
                     <img src="images/logo.svg" class="d-inline-block align-top" alt="">
                 </div>
-                <div class="col-2 logo">
-                    <h1>THE SCHOOL OF</h1>
-                    <h2>COMPUTER SCIENCE</h2>
+                <div class="col-2 header__logo">
+                    <h1 class="header__logo--top_row">THE SCHOOL OF</h1>
+                    <h2 class="header__logo--bottom_row">COMPUTER SCIENCE</h2>
                 </div>
             </div>
         </a>
@@ -44,7 +44,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav navigation-style ml-auto">
+            <ul class="navbar-nav header__menu ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="courses.html">Courses</a>
                 </li>
@@ -58,11 +58,12 @@
         </div>
     </nav>
 
-    <div class="row lead-image align-items-end">
+    <div class="row lead_block align-items-end">
         <div class="col">
-            <div class="row lead-text align-items-center pt-3 pb-3 pl-3">
+            <div class="row lead_block__text align-items-center pt-3 pb-3 pl-3">
                 <div class="col-md-8 col-lg-9">
-                    <h1 class="display-4">Learn computer disciplines apart from at school</h1>
+                    <h1 class="display-4 lead_block__text--big_size">Learn computer disciplines apart from at
+                        school</h1>
                     <ul class="list-unstyled">
                         <li>We offer for children 8-16 years:
                             <ul>
@@ -73,7 +74,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-lg-3 lead-browse-all-courses-button">
+                <div class="col-md-4 col-lg-3 lead_block__button">
                     <p>
                         <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a>
                     </p>
@@ -83,20 +84,20 @@
     </div>
 
     <!-- QUICK FACTS -->
-    <div class="row zero-side-margin">
-        <div class="col main-block">
-            <div class="row zero-side-margin">
-                <div class="offset-md-4 facts-headline">
-                    <h2>Quick facts about our computer school:</h2>
+    <div class="row zero_side_margin">
+        <div class="col page_index">
+            <div class="row zero_side_margin">
+                <div class="offset-md-4 page_index__headline">
+                    <h2 class="page_index__headline--big_colored_text">Quick facts about our computer school:</h2>
                 </div>
             </div>
-            <div class="row zero-side-margin facts-main align-items-center">
-                <div class="col-md-4 facts-image">
+            <div class="row page_index__facts_element align-items-center zero_side_margin">
+                <div class="col-md-4 page_index__facts_element_image">
                     <img src="images/003-outer-space.svg" width="190px" alt="Quick Facts">
 
                 </div>
-                <div class="col-md-8 zero-padding-left">
-                    <ul class="list-unstyled quick-facts-list">
+                <div class="col-md-8 page_index__facts_element_text">
+                    <ul class="list-unstyled">
                         <li>
                             <ul>
                                 <li>
@@ -120,27 +121,25 @@
                 </div>
             </div>
 
-            <div class="row zero-side-margin">
-                <div class="offset-md-4 facts-headline">
-                    <h2>We have been awarded:</h2>
+            <div class="row zero_side_margin">
+                <div class="offset-md-4 page_index__headline">
+                    <h2 class="page_index__headline--big_colored_text">We have been awarded:</h2>
                 </div>
 
             </div>
-            <div class="row align-items-center facts-main zero-side-margin">
-                <div class="col-md-4 facts-image">
+            <div class="row align-items-center page_index__facts_element zero_side_margin">
+                <div class="col-md-4 page_index__facts_element_image">
                     <img src="images/microsoft-award.png" width="190px" alt="Quick Facts">
 
                 </div>
-                <div class="col-md-8 zero-padding-left">
-
+                <div class="col-md-8 page_index__facts_element_text">
                     <p>We are the first computer school in Tallinn which has been certified by Microsoft in 2018
                         for providing the world-class programming courses in C#.</p>
-
                 </div>
             </div>
 
-            <div class="row zero-side-margin">
-                <div class="col browse-all-button">
+            <div class="row zero_side_margin">
+                <div class="col page_index__browse_all_button">
                     <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a>
                 </div>
             </div>
@@ -150,20 +149,19 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="row zero-side-margin footer">
+    <div class="row footer zero_side_margin">
         <div class="col-sm-12 col-md-7 col-lg-8">
-            <p class="copyright">© The School of Computer Science 2019</p>
+            <p class="footer__copyright">© The School of Computer Science 2019</p>
             <div>
-                <p><a href="index.html">Main page</a></p>
-                <p><a href="courses.html">Courses</a></p>
-                <p><a href="#">Our team</a></p>
-                <p><a href="#">Contact</a></p>
+                <p class="footer__links"><a href="index.html">Main page</a></p>
+                <p class="footer__links"><a href="courses.html">Courses</a></p>
+                <p class="footer__links"><a href="#">Our team</a></p>
+                <p class="footer__links"><a href="#">Contact</a></p>
             </div>
         </div>
-        <div class="col-sm-12 col-md-5 col-lg-4 eu-funds">
-            <p>We are supported by:</p>
-            <img width="250px" class="eu-funds-logo" src="images/eu-dev-fund.png">
-
+        <div class="col-sm-12 col-md-5 col-lg-4 footer__eu_funds">
+            <p class="footer__eu_funds_header">We are supported by:</p>
+            <img width="250px" class="footer__eu_funds_logo" src="images/eu-dev-fund.png">
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-@header-color: #2D3F7A;
+@header-color: #2D3F7B;
 @footer-color: #E8EBEE;
 @main-block-background: #ffffff !important;
 @page-background: #F7F8F9 !important;
@@ -7,127 +7,122 @@
 @tablet: ~"only screen and (min-width: 768px) and (max-width: 991px)";
 @phone: ~"(max-width: 767px)";
 
-
-.zero-side-margin {
+.zero_side_margin {
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
 
-.zero-padding-left {
-  padding-left: 0 !important;
-}
-
-
 body {
   background-color: @page-background;
-}
-
-
-.navbar-style {
-  background-color: @main-block-background;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
-}
-
-.logo {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  color: #474e55;
-
-  h1 {
-    margin-bottom: 0;
-  }
-
-  @media @phone {
-    h1 {
-      font-size: 20px;
-    }
-
-    h2 {
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-  }
-
-  @media @tablet {
-    h1 {
-      font-size: 36px;
-    }
-
-    h2 {
-      font-size: 27px;
-      letter-spacing: 0.7px;
-    }
-  }
-
-  @media @pc {
-    h1 {
-      font-size: 36px;
-    }
-
-    h2 {
-      font-size: 27px;
-      letter-spacing: 0.7px;
-    }
-  }
-}
-
-.navigation-style {
-  font-size: 19px;
-  font-weight: 600;
-  padding-right: 1.5rem !important;
-}
-
-body {
   font-family: 'Roboto', sans-serif;
 }
 
-.lead-image {
-  background-image: url("images/children-593313_1920.jpg");
-  background-size: cover;
-  min-height: 605px;
-  .zero-side-margin();
+.header {
+  background-color: @main-block-background;
+  padding-left: 25px !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
 
-  .lead-text {
-    background: rgba(45, 63, 123, 0.44) !important;
-    color: white;
+  &__logo {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #474e55;
 
-    h1 {
-      font-size: 30px;
+    &--top_row {
+      margin-bottom: 0;
+    }
+
+    @media @phone {
+      &--top_row {
+        font-size: 20px;
+      }
+
+      &--bottom_row {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media @tablet {
+      &--top_row {
+        font-size: 36px;
+      }
+
+      &--bottom_row {
+        font-size: 27px;
+        letter-spacing: 0.7px;
+      }
+    }
+
+    @media @pc {
+      &--top_row {
+        font-size: 36px;
+      }
+
+      &--bottom_row {
+        font-size: 27px;
+        letter-spacing: 0.7px;
+      }
     }
   }
 
-  .lead-browse-all-courses-button {
+  &__menu {
+    font-size: 19px;
+    font-weight: 600;
+    padding-right: 1.5rem !important;
+  }
+
+}
+
+.lead_block {
+  background-image: url("images/children-593313_1920.jpg");
+  background-size: cover;
+  min-height: 605px;
+  .zero_side_margin();
+
+  &__text {
+    background: rgba(45, 63, 123, 0.44) !important;
+    color: white;
+
+    &--big_size {
+      font-size: 30px !important;
+    }
+  }
+
+  &__button {
     text-align: center;
     padding-top: 15px;
   }
 }
 
-.main-block {
-  background-color: @main-block-background;
-  padding-top: 20px;
+.page_index {
+  .main_block();
 
-  .facts-headline {
+  &__headline {
     margin-top: 25px;
     padding-top: 25px;
+    margin-bottom: 22px;
 
-    h2 {
+    &--big_colored_text {
       color: @header-color;
-      margin-bottom: 22px;
       font-size: 26px;
     }
   }
 
-  .facts-main {
+  &__facts_element {
     padding-bottom: 50px;
 
-    .facts-image {
+    &_image {
       text-align: center;
       margin-bottom: 20px;
     }
+
+    &_text {
+      padding-left: 0 !important;
+    }
   }
 
-  .browse-all-button {
+  &__browse_all_button {
     text-align: center;
     margin-bottom: 60px;
   }
@@ -139,58 +134,88 @@ body {
   padding-bottom: 20px;
   padding-left: 15px;
 
-  p {
+  &__links {
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  .copyright {
+  &__copyright {
     margin-bottom: 15px;
   }
 
-  .eu-funds {
-    padding-top: 30px;
-  }
+  &__eu_funds {
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-  .eu-funds-logo {
-    padding-top: 10px;
-  }
-}
-
-.card-style {
-  background-color: white;
-}
-
-.course-card {
-  padding: 15px;
-  margin-bottom: 20px;
-
-  .card-image {
-    text-align: center;
-  }
-
-  .card-details-block {
-    padding-top: 20px;
-
-    .card-detail-item {
-      margin-right: 12px;
+    &_header {
+      margin-bottom: 5px;
     }
-  }
 
-  .card-button-row {
-    padding-top: 10px;
-
-    .card-button {
-      text-align: right;
+    &_logo {
+      padding-top: 10px;
     }
   }
 }
 
-.contact-us-block {
-  padding-top: 25px;
+.main_block {
+  background-color: @main-block-background;
+  padding-top: 20px;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
 
-  h5 {
-    padding-bottom: 20px;
+.page_courses {
+  .main_block();
+
+  &__courses_groups {
+    margin-bottom: 10px !important;
+  }
+
+  &__course_card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &_image {
+      text-align: center;
+    }
+
+    &_info {
+      padding-top: 15px;
+
+      &_title {
+        padding-bottom: 10px;
+        color: @header-color;
+      }
+
+      &_details {
+        padding-top: 20px;
+
+        &--separate-item {
+          margin-right: 12px;
+        }
+      }
+
+      &_register_row {
+        padding-top: 10px;
+        margin-right: -29px !important;
+
+        &_button {
+          text-align: right;
+        }
+      }
+    }
+
+    &_contact_us {
+      padding-top: 25px;
+
+      &--question {
+        padding-bottom: 20px;
+      }
+    }
+
   }
 }
+
+
 
