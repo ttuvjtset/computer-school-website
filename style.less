@@ -1,5 +1,6 @@
 @header-color: #2D3F7B;
 @footer-color: #E8EBEE;
+@logo-text-color: #474e55;
 @main-block-background: #ffffff !important;
 @page-background: #F7F8F9 !important;
 
@@ -26,15 +27,12 @@ body {
   &__logo {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
-    color: #474e55;
-
-    &--top_row {
-      margin-bottom: 0;
-    }
+    color: @logo-text-color;
 
     @media @phone {
       &--top_row {
         font-size: 20px;
+        margin-bottom: -4px !important;
       }
 
       &--bottom_row {
@@ -46,6 +44,7 @@ body {
     @media @tablet {
       &--top_row {
         font-size: 36px;
+        margin-bottom: -9px !important;
       }
 
       &--bottom_row {
@@ -57,6 +56,7 @@ body {
     @media @pc {
       &--top_row {
         font-size: 36px;
+        margin-bottom: -9px !important;
       }
 
       &--bottom_row {
@@ -162,6 +162,10 @@ body {
   padding-top: 20px;
   padding-left: 25px !important;
   padding-right: 25px !important;
+
+  &__page_header {
+    color: @header-color;
+  }
 }
 
 .page_courses {

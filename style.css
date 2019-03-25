@@ -17,12 +17,10 @@ body {
   font-weight: bold;
   color: #474e55;
 }
-.header__logo--top_row {
-  margin-bottom: 0;
-}
 @media (max-width: 767px) {
   .header__logo--top_row {
     font-size: 20px;
+    margin-bottom: -4px !important;
   }
   .header__logo--bottom_row {
     font-size: 14px;
@@ -32,6 +30,7 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header__logo--top_row {
     font-size: 36px;
+    margin-bottom: -9px !important;
   }
   .header__logo--bottom_row {
     font-size: 27px;
@@ -41,6 +40,7 @@ body {
 @media only screen and (min-width: 992px) {
   .header__logo--top_row {
     font-size: 36px;
+    margin-bottom: -9px !important;
   }
   .header__logo--bottom_row {
     font-size: 27px;
@@ -75,6 +75,9 @@ body {
   padding-top: 20px;
   padding-left: 25px !important;
   padding-right: 25px !important;
+}
+.page_index__page_header {
+  color: #2D3F7B;
 }
 .page_index__headline {
   margin-top: 25px;
@@ -128,11 +131,17 @@ body {
   padding-left: 25px !important;
   padding-right: 25px !important;
 }
+.main_block__page_header {
+  color: #2D3F7B;
+}
 .page_courses {
   background-color: #ffffff !important;
   padding-top: 20px;
   padding-left: 25px !important;
   padding-right: 25px !important;
+}
+.page_courses__page_header {
+  color: #2D3F7B;
 }
 .page_courses__courses_groups {
   margin-bottom: 10px !important;
