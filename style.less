@@ -8,6 +8,8 @@
 @tablet: ~"only screen and (min-width: 768px) and (max-width: 991px)";
 @phone: ~"(max-width: 767px)";
 
+
+
 .zero_side_margin {
   margin-right: 0 !important;
   margin-left: 0 !important;
@@ -220,6 +222,57 @@ body {
 
   }
 }
+
+.page_register {
+  background-color: @main-block-background;
+
+  &_block {
+    padding-top:10px;
+    padding-bottom: 50px;
+
+    &__course {
+      padding-bottom: 30px;
+      padding-top: 10px;
+
+      &--text {
+        padding-bottom: 10px;
+      }
+
+      &--image {
+        margin-right: 15px;
+      }
+    }
+
+    &__form {
+
+      @media @phone {
+        &--hidden_label{
+          display: none;
+        }
+      }
+
+      &_button_row {
+        text-align: right;
+
+        &--button {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__image {
+      text-align: center;
+
+     &--smaller {
+       max-width: 80%;
+     }
+    }
+
+
+  }
+}
+
+
 
 
 

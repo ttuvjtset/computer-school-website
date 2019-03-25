@@ -180,4 +180,38 @@ body {
 .page_courses__course_card_contact_us--question {
   padding-bottom: 20px;
 }
+.page_register {
+  background-color: #ffffff !important;
+}
+.page_register_block {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.page_register_block__course {
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+.page_register_block__course--text {
+  padding-bottom: 10px;
+}
+.page_register_block__course--image {
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .page_register_block__form--hidden_label {
+    display: none;
+  }
+}
+.page_register_block__form_button_row {
+  text-align: right;
+}
+.page_register_block__form_button_row--button {
+  margin-top: 20px;
+}
+.page_register_block__image {
+  text-align: center;
+}
+.page_register_block__image--smaller {
+  max-width: 80%;
+}
 /*# sourceMappingURL=style.css.map */
