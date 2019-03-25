@@ -214,4 +214,24 @@ body {
 .page_register_block__image--smaller {
   max-width: 80% !important;
 }
+.page_thank_you {
+  background-color: #ffffff !important;
+}
+.page_thank_you_message {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.page_thank_you_message__icon {
+  color: #82BA6F;
+  width: 100px;
+  margin-bottom: 25px;
+}
+.page_thank_you_message__header {
+  margin-bottom: 25px;
+  color: #2D3F7B;
+}
+.page_thank_you_message__btn {
+  margin-top: 70px;
+}
 /*# sourceMappingURL=style.css.map */

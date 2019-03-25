@@ -3,6 +3,7 @@
 @logo-text-color: #474e55;
 @main-block-background: #ffffff !important;
 @page-background: #F7F8F9 !important;
+@green-color: #82BA6F;
 
 @pc: ~"only screen and (min-width: 992px)";
 @tablet: ~"only screen and (min-width: 768px) and (max-width: 991px)";
@@ -267,9 +268,33 @@ body {
        max-width: 80% !important;
      }
     }
-
-
   }
+}
+
+.page_thank_you {
+  background-color: @main-block-background;
+
+  &_message {
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    &__icon {
+      color: @green-color;
+      width: 100px;
+      margin-bottom: 25px;
+    }
+
+    &__header {
+      margin-bottom: 25px;
+      color: @header-color;
+    }
+
+    &__btn {
+      margin-top: 70px;
+    }
+  }
+
 }
 
 
