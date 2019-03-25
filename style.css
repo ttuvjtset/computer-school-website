@@ -212,6 +212,6 @@ body {
   text-align: center;
 }
 .page_register_block__image--smaller {
-  max-width: 80%;
+  max-width: 80% !important;
 }
 /*# sourceMappingURL=style.css.map */
