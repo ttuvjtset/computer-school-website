@@ -25,7 +25,8 @@
           </div>
           <div class="col-md-4 col-lg-3 lead_block__button">
             <p>
-              <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a>
+              <router-link class="btn btn-primary" to="/courses">Browse all courses</router-link>
+              <!-- <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a> -->
             </p>
           </div>
         </div>
@@ -90,7 +91,9 @@
 
         <div class="row zero_side_margin">
           <div class="col page_index__browse_all_button">
-            <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a>
+            <router-link class="btn btn-primary" to="/courses" role="button">Browse all courses</router-link>
+
+            <!-- <a class="btn btn-primary" href="courses.html" role="button">Browse all courses</a> -->
           </div>
         </div>
       </div>
