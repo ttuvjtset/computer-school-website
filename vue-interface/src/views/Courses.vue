@@ -177,14 +177,13 @@
         >
           <div class="row zero_side_margin align-items-center">
             <div class="col-md-3 page_courses__course_card_image">
-              <img :src="course.img"
-              width="200" class="img-fluid" alt>
+              <img :src="getLocalImage(course.img_src)" width="200" class="img-fluid" alt>
             </div>
             <div class="col-md-9 page_courses__course_card_info">
               <div class="row zero_side_margin">
                 <div class="col-md-12">
-                  <h4 class="card-title page_courses__course_card_info_title">{{course.img_url}}</h4>
-                  <p class="card-text">Design your first real video game</p>
+                  <h4 class="card-title page_courses__course_card_info_title">{{course.title}}</h4>
+                  <p class="card-text">{{course.description}}</p>
                 </div>
               </div>
               <div class="row zero_side_margin page_courses__course_card_info_details">
@@ -192,24 +191,24 @@
                   <p>
                     <i
                       class="fa fa-calendar fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>32 weeks - from April to September
+                    ></i>{{course.duration}}
                   </p>
                   <p>
                     <i
                       class="fa fa-clock-o fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>On Wednesdays
+                    ></i>{{course.frequency}}
                   </p>
                 </div>
                 <div class="col-md-6">
                   <p>
                     <i
                       class="fa fa-user fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>13-16 years
+                    ></i>{{course.age}}
                   </p>
                   <p>
                     <i
                       class="fa fa-money fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>400 EUR / course
+                    ></i>{{course.price}}
                   </p>
                 </div>
               </div>
@@ -243,7 +242,7 @@ export default {
       courses_data: [
         {
           id: 0,
-          img: "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/programming.svg",
+          img_src: "programming.svg",
           title: "Introduction to C# Programming",
           description: "First steps into the big world of programming.",
           duration: "16 weeks - from April to June",
@@ -253,7 +252,7 @@ export default {
         },
         {
           id: 1,
-          img: "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/web-programming.svg",
+          img_src: "web-programming.svg",
           title: "Web-design",
           description:
             "Learn how to create and design the web-sites. From basics in HTML to CSS.",
@@ -264,7 +263,7 @@ export default {
         },
         {
           id: 2,
-          img: "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/game-development.svg",
+          img_src: "game-development.svg",
           title: "Game developement with Unity Engine",
           description: "Design your first real video game.",
           duration: "32 weeks - from April to September",
@@ -274,6 +273,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    getLocalImage(filename) {
+      return require("../assets/" + filename);
+    }
   }
 };
 </script>

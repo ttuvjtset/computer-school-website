@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "img": "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/programming.svg",
+    "title": "Introduction to C# Programming",
+    "description": "First steps into the big world of programming.",
+    "duration": "16 weeks - from April to June",
+    "frequency": "Twice a week on Mondays and Fridays",
+    "age": "8-12 years",
+    "price": "200 EUR / course"
+  },
+  {
+    "id": 1,
+    "img": "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/web-programming.svg",
+    "title": "Web-design",
+    "description": "Learn how to create and design the web-sites. From basics in HTML to CSS.",
+    "duration": "10 weeks - from March to May",
+    "frequency": "On Sundays",
+    "age": "8-12 years",
+    "price": "200 EUR / course"
+  },
+  {
+    "id": 2,
+    "img": "http://dijkstra.cs.ttu.ee/~vjtset/kasutajaliidesed/prax2/images/game-development.svg",
+    "title": "Game developement with Unity Engine",
+    "description": "Design your first real video game.",
+    "duration": "32 weeks - from April to September",
+    "frequency": "On Wednesdays",
+    "age": "13-16 years",
+    "price": "400 EUR / course"
+  }
+]
