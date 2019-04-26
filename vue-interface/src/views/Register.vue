@@ -33,28 +33,45 @@
 
           <div class="row align-items-center">
             <div class="col-md-12">
-              <form>
+              <form @submit.prevent="formSubmit">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputParentFirstName">Parent Name</label>
                     <input
-                      type="email"
+                      v-validate="'required|alpha|min:2'"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('inputParentFirstName') }"
+                      name="inputParentFirstName"
+                      data-vv-as="Parent First Name"
+                      type="text"
                       class="form-control"
                       id="inputParentFirstName"
                       placeholder="First Name"
                     >
+                    <div
+                      v-if="submit_clicked && errors.has('inputParentFirstName')"
+                      class="text-danger page_register_block__form--error_message"
+                    >{{ errors.first('inputParentFirstName') }}</div>
                   </div>
+
                   <div class="form-group col-md-6">
                     <label
                       class="page_register_block__form--hidden_label"
                       for="inputParentLastName"
                     >&nbsp;</label>
                     <input
-                      type="password"
+                      v-validate="'required|alpha|min:2'"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('inputParentLastName') }"
+                      name="inputParentLastName"
+                      data-vv-as="Parent Last Name"
+                      type="text"
                       class="form-control"
                       id="inputParentLastName"
                       placeholder="Last Name"
                     >
+                    <div
+                      v-if="submit_clicked && errors.has('inputParentLastName')"
+                      class="text-danger page_register_block__form--error_message"
+                    >{{ errors.first('inputParentLastName') }}</div>
                   </div>
                 </div>
 
@@ -62,42 +79,88 @@
                   <div class="form-group col-md-6">
                     <label for="inputStudentFirstName">Student Name</label>
                     <input
-                      type="email"
+                      v-validate="'required|alpha|min:2'"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('inputStudentFirstName') }"
+                      name="inputStudentFirstName"
+                      data-vv-as="Student First Name"
+                      type="text"
                       class="form-control"
                       id="inputStudentFirstName"
                       placeholder="First Name"
                     >
+                    <div
+                      v-if="submit_clicked && errors.has('inputStudentFirstName')"
+                      class="text-danger page_register_block__form--error_message"
+                    >{{ errors.first('inputStudentFirstName') }}</div>
                   </div>
+
                   <div class="form-group col-md-6">
                     <label
                       class="page_register_block__form--hidden_label"
                       for="inputStudentLastName"
                     >&nbsp;</label>
                     <input
-                      type="password"
+                      v-validate="'required|alpha|min:2'"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('inputStudentLastName') }"
+                      name="inputStudentLastName"
+                      data-vv-as="Student Last Name"
+                      type="text"
                       class="form-control"
                       id="inputStudentLastName"
                       placeholder="Last Name"
                     >
+                    <div
+                      v-if="submit_clicked && errors.has('inputStudentLastName')"
+                      class="text-danger page_register_block__form--error_message"
+                    >{{ errors.first('inputStudentLastName') }}</div>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="telephone">Telephone</label>
-                  <input type="text" class="form-control" id="telephone" placeholder="Telephone">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="validationTooltipUsernamePrepend">+372</span>
+                    </div>
+                    <input
+                      v-validate="'required|numeric|min:5'"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('email') }"
+                      name="telephone"
+                      data-vv-as="Telephone"
+                      type="text"
+                      class="form-control"
+                      id="telephone"
+                      placeholder="Telephone"
+                    >
+                  </div>
+                  <div
+                    v-if="submit_clicked && errors.has('email')"
+                    class="text-danger page_register_block__form--error_message"
+                  >{{ errors.first('telephone') }}</div>
                 </div>
 
                 <div class="form-group">
                   <label for="telephone">E-mail</label>
-                  <input type="text" class="form-control" id="email" placeholder="E-mail">
+                  <input
+                    v-validate="'required|email'"
+                    :class="{ 'is-invalid': submit_clicked && errors.has('email') }"
+                    name="email"
+                    data-vv-as="E-mail"
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="E-mail"
+                  >
+                  <div
+                    v-if="submit_clicked && errors.has('email')"
+                    class="page_register_block__form--error_message text-danger"
+                  >{{ errors.first('email') }}</div>
                 </div>
 
                 <div class="page_register_block__form_button_row">
-                  <router-link
+                  <button
                     class="btn page_register_block__form_button_row--button btn-primary"
-                    to="/thankyou"
-                    role="button"
-                  >Register</router-link>
+                  >Register</button>
                 </div>
               </form>
             </div>
@@ -118,6 +181,7 @@
 
 <script>
 import coursesJson from "@/assets/courses.json";
+import Router from "@/router";
 
 export default {
   name: "Register",
@@ -125,7 +189,8 @@ export default {
     return {
       courses_data: coursesJson,
       selected_course: {},
-      no_course_found: true
+      no_course_found: true,
+      submit_clicked: false
     };
   },
   components: {},
@@ -141,6 +206,14 @@ export default {
           this.no_course_found = false;
         }
       }
+    },
+    formSubmit() {
+      this.submit_clicked = true;
+      this.$validator.validate().then(valid => {
+        if (valid) {
+          this.$router.push("/thankyou");
+        }
+      });
     }
   },
   created() {
@@ -152,5 +225,9 @@ export default {
 <style scope>
 .main_block__error {
   padding-bottom: 400px;
+}
+.page_register_block__form--error_message {
+  font-size: 13px;
+  margin-top: 3px;
 }
 </style>
