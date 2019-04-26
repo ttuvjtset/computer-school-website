@@ -1,20 +1,19 @@
 <template>
   <router-link
     to="/courses"
-    v-on:click.native="filterCourses(groupNumber)"
+    v-on:click.native="filterCourses(group.number)"
     class="btn btn-outline-primary w-100"
-    :class="{ 'active' : currentFilter === groupNumber }"
-  >{{groupName}}</router-link>
+    :class="{ 'active' : currentFilter === group.number }"
+  >{{group.name}}</router-link>
 </template>
 
 <script>
 export default {
   name: "FilterButton",
   props: {
-    groupName: String,
-    groupNumber: Number,
+    group: Object,
     currentFilter: Number,
-    filterCourses: Function
+    filterCoursesFunc: Function
   }
 };
 </script>

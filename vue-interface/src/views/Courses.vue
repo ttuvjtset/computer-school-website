@@ -12,10 +12,9 @@
           <FilterButton
             v-for="group in groups"
             :key="group.id"
-            :filterCourses="filter_courses"
+            :group="group"
+            :filterCoursesFunc="filter_courses"
             :currentFilter="current_filter"
-            :groupName="group.name"
-            :groupNumber="group.number"
           />
         </div>
       </div>
@@ -25,60 +24,12 @@
       <div class="col-md-12 main_block">
         <!-- <a class="btn btn-primary" @click="test_function" role="button">Test</a> -->
 
-        <div
-          class="card page_courses__course_card border-secondary page_courses__course_card"
+        <CourseCard
           :key="course.id"
           v-for="course in courses_to_view"
-        >
-          <div class="row zero_side_margin align-items-center">
-            <div class="col-md-3 page_courses__course_card_image">
-              <img :src="getAssetsPath(course.img_src)" width="200" class="img-fluid" alt>
-            </div>
-            <div class="col-md-9 page_courses__course_card_info">
-              <div class="row zero_side_margin">
-                <div class="col-md-12">
-                  <h4 class="card-title page_courses__course_card_info_title">{{course.title}}</h4>
-                  <p class="card-text">{{course.description}}</p>
-                </div>
-              </div>
-              <div class="row zero_side_margin page_courses__course_card_info_details">
-                <div class="col-md-6">
-                  <p>
-                    <i
-                      class="fa fa-calendar fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>
-                    {{course.duration}}
-                  </p>
-                  <p>
-                    <i
-                      class="fa fa-clock-o fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>
-                    {{course.frequency}}
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <p>
-                    <i
-                      class="fa fa-user fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>
-                    {{course.age}}
-                  </p>
-                  <p>
-                    <i
-                      class="fa fa-money fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>
-                    {{course.price}}
-                  </p>
-                </div>
-              </div>
-              <div class="row zero_side_margin page_courses__course_card_info_register_row">
-                <div class="col-md-12 page_courses__course_card_info_register_row_button">
-                  <a href="register.html" class="btn btn-primary">Register</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          :course="course"
+          :imageSrc="getAssetsPath(course.img_src)"
+        />
 
         <div class="row zero_side_margin page_courses__course_card_contact_us">
           <div class="col page_index__browse_all_button">
@@ -94,9 +45,10 @@
 </template>
 
 <script>
-import coursesJson from "../assets/courses.json";
-import groupsJson from "../assets/groups.json";
+import coursesJson from "@/assets/courses.json";
+import groupsJson from "@/assets/groups.json";
 import FilterButton from "@/components/FilterButton.vue";
+import CourseCard from "@/components/CourseCard.vue";
 
 export default {
   name: "Courses",
@@ -109,7 +61,8 @@ export default {
     };
   },
   components: {
-    FilterButton
+    FilterButton,
+    CourseCard
   },
   methods: {
     getAssetsPath(filename) {
