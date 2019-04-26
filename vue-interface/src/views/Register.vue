@@ -188,7 +188,7 @@ export default {
     return {
       courses_data: {},
       selected_course: {},
-      no_course_found: false,
+      no_course_found: true,
       submit_clicked: false
     };
   },
@@ -205,6 +205,9 @@ export default {
         if (course.id === parseInt(courseNum)) {
           this.selected_course = course;
           this.no_course_found = false;
+          break;
+        } else {
+          this.no_course_found = true;
         }
       }
     },

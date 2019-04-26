@@ -106,7 +106,6 @@ export default {
   mounted() {
     this.fetchCourses();
     this.fetchGroups();
-    // this.courses_to_view = this.courses_data;
   }
 };
 </script>
