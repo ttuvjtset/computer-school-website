@@ -31,5 +31,27 @@
     "frequency": "On Wednesdays",
     "age": "13-16 years",
     "price": "400 EUR / course"
+  },
+  {
+    "id": 3,
+    "group": 1,
+    "img_src": "responsive.svg",
+    "title": "Mobile Development on C#",
+    "description": "Advanced course, where you will learn a cross-platform game development with Unity and Visual Studio.",
+    "duration": "32 weeks - from June to August",
+    "frequency": "On Fridays and Saturdays",
+    "age": "13-16 years",
+    "price": "600 EUR / course"
+  },
+  {
+    "id": 4,
+    "group": 2,
+    "img_src": "web.svg",
+    "title": "Web Design - Advanced",
+    "description": "Create a Single Page Application using Vue, know how to use CSS preprocessors like LESS ans SASS.",
+    "duration": "10 weeks - from July to August",
+    "frequency": "On Sundays",
+    "age": "13-16 years",
+    "price": "300 EUR / course"
   }
 ]

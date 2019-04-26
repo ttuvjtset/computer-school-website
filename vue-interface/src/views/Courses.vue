@@ -36,7 +36,7 @@
             <h5
               class="page_courses__course_card_contact_us--question"
             >Do you have any open question?</h5>
-            <a class="btn btn-primary" href="courses.html" role="button">Contact us</a>
+            <a class="btn btn-primary" href="#" role="button">Contact us</a>
           </div>
         </div>
       </div>
@@ -45,8 +45,6 @@
 </template>
 
 <script>
-import coursesJson from "@/assets/courses.json";
-import groupsJson from "@/assets/groups.json";
 import FilterButton from "@/components/FilterButton.vue";
 import CourseCard from "@/components/CourseCard.vue";
 
@@ -54,8 +52,8 @@ export default {
   name: "Courses",
   data() {
     return {
-      courses_data: coursesJson,
-      groups: groupsJson,
+      courses_data: {},
+      groups: {},
       courses_to_view: [],
       current_filter: 0
     };
@@ -66,7 +64,9 @@ export default {
   },
   methods: {
     getAssetsPath(filename) {
-      return require("../assets/" + filename);
+      if (typeof filename !== "undefined") {
+        return require("../assets/" + filename);
+      }
     },
     filter_courses(groupNum) {
       this.current_filter = groupNum;
@@ -82,10 +82,31 @@ export default {
         }
         this.courses_to_view = filtered_list;
       }
+    },
+    fetchCourses() {
+      fetch(process.env.VUE_APP_ROOT_API + "courses.json")
+        .then(reponse => {
+          return reponse.json();
+        })
+        .then(data => {
+          this.courses_to_view = data;
+          this.courses_data = data;
+        });
+    },
+    fetchGroups() {
+      fetch(process.env.VUE_APP_ROOT_API + "groups.json")
+        .then(reponse => {
+          return reponse.json();
+        })
+        .then(data => {
+          this.groups = data;
+        });
     }
   },
   mounted() {
-    this.courses_to_view = this.courses_data;
+    this.fetchCourses();
+    this.fetchGroups();
+    // this.courses_to_view = this.courses_data;
   }
 };
 </script>

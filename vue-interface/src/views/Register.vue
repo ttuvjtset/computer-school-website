@@ -124,7 +124,7 @@
                     </div>
                     <input
                       v-validate="'required|numeric|min:5'"
-                      :class="{ 'is-invalid': submit_clicked && errors.has('email') }"
+                      :class="{ 'is-invalid': submit_clicked && errors.has('telephone') }"
                       name="telephone"
                       data-vv-as="Telephone"
                       type="text"
@@ -134,7 +134,7 @@
                     >
                   </div>
                   <div
-                    v-if="submit_clicked && errors.has('email')"
+                    v-if="submit_clicked && errors.has('telephone')"
                     class="text-danger page_register_block__form--error_message"
                   >{{ errors.first('telephone') }}</div>
                 </div>
@@ -180,23 +180,24 @@
 </template>
 
 <script>
-import coursesJson from "@/assets/courses.json";
 import Router from "@/router";
 
 export default {
   name: "Register",
   data() {
     return {
-      courses_data: coursesJson,
+      courses_data: {},
       selected_course: {},
-      no_course_found: true,
+      no_course_found: false,
       submit_clicked: false
     };
   },
   components: {},
   methods: {
     getAssetsPath(filename) {
-      return require("../assets/" + filename);
+      if (typeof filename !== "undefined") {
+        return require("../assets/" + filename);
+      }
     },
     findExactCourse(courseNum) {
       for (let key in this.courses_data) {
@@ -214,10 +215,20 @@ export default {
           this.$router.push("/thankyou");
         }
       });
+    },
+    fetchCourses() {
+      fetch(process.env.VUE_APP_ROOT_API + "courses.json")
+        .then(reponse => {
+          return reponse.json();
+        })
+        .then(data => {
+          this.courses_data = data;
+          this.findExactCourse(this.$route.params.id);
+        });
     }
   },
   created() {
-    this.findExactCourse(this.$route.params.id);
+    this.fetchCourses();
   }
 };
 </script>
