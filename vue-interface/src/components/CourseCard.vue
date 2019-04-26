@@ -37,7 +37,9 @@
         </div>
         <div class="row zero_side_margin page_courses__course_card_info_register_row">
           <div class="col-md-12 page_courses__course_card_info_register_row_button">
-            <a href="register.html" class="btn btn-primary">Register</a>
+            <router-link 
+            :to="{ path: '/register/'+ course.id}"
+            class="btn btn-primary">Register</router-link>
           </div>
         </div>
       </div>
