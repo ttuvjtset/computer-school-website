@@ -9,14 +9,14 @@
     <div class="row zero_side_margin">
       <div class="col-lg-12 main_block">
         <div class="btn-group page_courses__courses_groups d-flex" role="group">
-          <router-link
+          <FilterButton
             v-for="group in groups"
             :key="group.id"
-            to="/courses"
-            v-on:click.native="filter_courses(group.number)"
-            class="btn btn-outline-primary w-100"
-            :class="{ 'active' : current_filter === group.number }"
-          >{{group.name}}</router-link>
+            :filterCourses="filter_courses"
+            :currentFilter="current_filter"
+            :groupName="group.name"
+            :groupNumber="group.number"
+          />
         </div>
       </div>
     </div>
@@ -96,6 +96,7 @@
 <script>
 import coursesJson from "../assets/courses.json";
 import groupsJson from "../assets/groups.json";
+import FilterButton from "@/components/FilterButton.vue";
 
 export default {
   name: "Courses",
@@ -106,6 +107,9 @@ export default {
       courses_to_view: [],
       current_filter: 0
     };
+  },
+  components: {
+    FilterButton
   },
   methods: {
     getAssetsPath(filename) {
