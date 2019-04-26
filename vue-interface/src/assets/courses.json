@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "group": 1,
     "img_src": "programming.svg",
     "title": "Introduction to C# Programming",
     "description": "First steps into the big world of programming.",
@@ -11,6 +12,7 @@
   },
   {
     "id": 1,
+    "group": 2,
     "img_src": "web-programming.svg",
     "title": "Web-design",
     "description": "Learn how to create and design the web-sites. From basics in HTML to CSS.",
@@ -21,6 +23,7 @@
   },
   {
     "id": 2,
+    "group": 3,
     "img_src": "game-development.svg",
     "title": "Game developement with Unity Engine",
     "description": "Design your first real video game.",

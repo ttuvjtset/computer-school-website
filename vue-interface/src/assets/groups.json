@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "number": 0,
+        "name": "All"
+    },
+    {
+        "id": 1,
+        "number": 1,
+        "name": "Programming"
+    },
+    {
+        "id": 2,
+        "number": 2,
+        "name": "Web-design"
+    },
+    {
+        "id": 3,
+        "number": 3,
+        "name": "Game development"
+    }
+]
