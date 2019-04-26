@@ -2,7 +2,7 @@
   <div class="page_register">
     <div class="row zero_side_margin">
       <div class="col-md-12 main_block">
-        <h4 class="main_block__page_header">Register for the course {{$route.params.id}}</h4>
+        <h4 class="main_block__page_header">Register for the course</h4>
       </div>
     </div>
 
@@ -12,12 +12,12 @@
           <div class="col-md-4 page_register_block__course--text col-lg-3">Selected Course</div>
           <div class="col-md-8 col-lg-9">
             <img
-              src="images/programming.svg"
+              :src="getAssetsPath(selected_course.img_src)"
               width="45"
               class="img page_register_block__course--image"
               alt
             >
-            Introduction to C#
+            {{selected_course.title}}
           </div>
         </div>
 
@@ -83,11 +83,11 @@
               </div>
 
               <div class="page_register_block__form_button_row">
-                <a
+                <router-link
                   class="btn page_register_block__form_button_row--button btn-primary"
-                  href="thank_you.html"
+                  to="/thankyou"
                   role="button"
-                >Register</a>
+                >Register</router-link>
               </div>
             </form>
           </div>
@@ -96,7 +96,7 @@
 
       <div class="col-md-4 page_register_block__image main_block">
         <img
-          src="images/002-immersive.svg"
+          :src="getAssetsPath('002-immersive.svg')"
           class="img-fluid page_register_block__image--smaller"
           alt
         >
@@ -106,22 +106,32 @@
 </template>
 
 <script>
+import coursesJson from "@/assets/courses.json";
+
 export default {
   name: "Register",
   data() {
     return {
-
+      courses_data: coursesJson,
+      selected_course: {}
     };
   },
-  components: {
-
-  },
+  components: {},
   methods: {
-    
+    getAssetsPath(filename) {
+      return require("../assets/" + filename);
+    },
+    findExactCourse(courseNum) {
+      for (let key in this.courses_data) {
+        let course = this.courses_data[key];
+        if (course.id === parseInt(courseNum)) {
+          this.selected_course = course;
+        }
+      }
+    }
   },
-  mounted() {
-
+  created() {
+    this.findExactCourse(this.$route.params.id);
   }
 };
-
 </script>
