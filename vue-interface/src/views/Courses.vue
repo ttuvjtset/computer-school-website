@@ -177,7 +177,7 @@
         >
           <div class="row zero_side_margin align-items-center">
             <div class="col-md-3 page_courses__course_card_image">
-              <img :src="getLocalImage(course.img_src)" width="200" class="img-fluid" alt>
+              <img :src="getAssetsPath(course.img_src)" width="200" class="img-fluid" alt>
             </div>
             <div class="col-md-9 page_courses__course_card_info">
               <div class="row zero_side_margin">
@@ -191,24 +191,28 @@
                   <p>
                     <i
                       class="fa fa-calendar fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>{{course.duration}}
+                    ></i>
+                    {{course.duration}}
                   </p>
                   <p>
                     <i
                       class="fa fa-clock-o fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>{{course.frequency}}
+                    ></i>
+                    {{course.frequency}}
                   </p>
                 </div>
                 <div class="col-md-6">
                   <p>
                     <i
                       class="fa fa-user fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>{{course.age}}
+                    ></i>
+                    {{course.age}}
                   </p>
                   <p>
                     <i
                       class="fa fa-money fa-fw page_courses__course_card_info_details--separate-item"
-                    ></i>{{course.price}}
+                    ></i>
+                    {{course.price}}
                   </p>
                 </div>
               </div>
@@ -235,49 +239,21 @@
 </template>
 
 <script>
+import json from "../assets/courses.json";
+
 export default {
   name: "Courses",
-  data: function() {
+  data() {
     return {
-      courses_data: [
-        {
-          id: 0,
-          img_src: "programming.svg",
-          title: "Introduction to C# Programming",
-          description: "First steps into the big world of programming.",
-          duration: "16 weeks - from April to June",
-          frequency: "Twice a week on Mondays and Fridays",
-          age: "8-12 years",
-          price: "200 EUR / course"
-        },
-        {
-          id: 1,
-          img_src: "web-programming.svg",
-          title: "Web-design",
-          description:
-            "Learn how to create and design the web-sites. From basics in HTML to CSS.",
-          duration: "10 weeks - from March to May",
-          frequency: "On Sundays",
-          age: "8-12 years",
-          price: "200 EUR / course"
-        },
-        {
-          id: 2,
-          img_src: "game-development.svg",
-          title: "Game developement with Unity Engine",
-          description: "Design your first real video game.",
-          duration: "32 weeks - from April to September",
-          frequency: "On Wednesdays",
-          age: "13-16 years",
-          price: "400 EUR / course"
-        }
-      ]
-    };
+      courses_data: json
+    }
   },
   methods: {
-    getLocalImage(filename) {
+    getAssetsPath(filename) {
       return require("../assets/" + filename);
     }
-  }
+  },
+  // mounted() {
+  // }
 };
 </script>
