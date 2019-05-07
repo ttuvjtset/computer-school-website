@@ -1,0 +1,182 @@
+{
+    "courses_popularity_title": "Number of students attending courses (2018-2019)",
+    "courses_popularity": [
+        {
+            "name": "2017",
+            "values": [
+                9,
+                6,
+                8,
+                0,
+                17
+            ]
+        },
+        {
+            "name": "2018",
+            "values": [
+                7,
+                9,
+                11,
+                0,
+                20
+            ]
+        },
+        {
+            "name": "2019",
+            "values": [
+                10,
+                5,
+                15,
+                11,
+                9
+            ]
+        }
+    ],
+    "courses_popularity_labels": [
+        "Introduction to C# Programming",
+        "Mobile Development on C#",
+        "Web-design",
+        "Web-design advanced",
+        "Game developement with Unity Engine"
+    ],
+    "courses_popularity_colors": [
+        "light-blue",
+        "blue",
+        "orange"
+    ],
+    "programing_hours_title": "Academic hours per month (2019)",
+    "programming_hours": [
+        {
+            "name": "Programming",
+            "values": [
+                30,
+                40,
+                35,
+                25,
+                40
+            ]
+        },
+        {
+            "name": "Web-design",
+            "values": [
+                20,
+                25,
+                17,
+                50,
+                22
+            ]
+        },
+        {
+            "name": "Game develop.",
+            "values": [
+                50,
+                55,
+                38,
+                65,
+                49
+            ]
+        }
+    ],
+    "programming_hours_labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May"
+    ],
+    "programming_hours_colors": [
+        "red",
+        "blue",
+        "light-green"
+    ],
+    "number_of_people_title": "Number of students and teachers (2010-2019)",
+    "number_of_people_labels": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019"
+    ],
+    "number_of_people_colors": [
+        "green",
+        "blue"
+    ],
+    "number_of_people": [
+        {
+            "name": "Students",
+            "values": [
+                15,
+                20,
+                25,
+                30,
+                40,
+                50,
+                65,
+                62,
+                55,
+                70
+            ]
+        },
+        {
+            "name": "Teachers",
+            "values": [
+                1,
+                2,
+                3,
+                3,
+                4,
+                4,
+                5,
+                4,
+                5,
+                7
+            ]
+        }
+    ],
+    "students_age_title": "Students age",
+    "students_age_labels": [
+        "8-9 y.",
+        "10-11 y.",
+        "12-13 y.",
+        "14-16 y."
+    ],
+    "students_age_colors": [
+        "light-blue",
+        "blue",
+        "purple",
+        "red",
+        "orange"
+    ],
+    "students_age": [
+        {
+            "values": [
+                14,
+                13,
+                21,
+                13
+            ]
+        }
+    ],
+    "students_gender_title": "Students gender",
+    "students_gender_labels": [
+        "Boys",
+        "Girls"
+    ],
+    "students_gender_colors": [
+        "light-green",
+        "magenta"
+    ],
+    "students_gender": [
+        {
+            "values": [
+                43,
+                19
+            ]
+        }
+    ]
+}
