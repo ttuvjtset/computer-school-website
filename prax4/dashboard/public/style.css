@@ -1,0 +1,28 @@
+.nav_bar--color {
+    background-color: #F8F9FA
+}
+
+.nav_bar__connection_icon--size {
+    font-size: 14px;
+}
+
+.nav_bar__btn--hand_cursor {
+    cursor: pointer;
+}
+
+.sets__cell--center_align {
+    text-align: center;
+}
+
+.sets__detail_rows {
+    font-size: 15px;
+    background-color: #F1F3F5;
+}
+
+.days_bar__btn--hand_cursor {
+    cursor: pointer;
+}
+
+.forecast__cell--center_align {
+    text-align: center;
+}

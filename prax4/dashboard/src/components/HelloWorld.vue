@@ -6,7 +6,7 @@
       type="line"
       :labels="['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']"
       :height="400"
-      :colors="['green', 'yellow']"
+      :colors="['green', 'blue']"
       :lineOptions="{regionFill: 1}"
       :dataSets="[
         {name: 'Students', values: this.students_count},
@@ -100,7 +100,7 @@ export default {
         }
       ],
       students_count: [15, 20, 25, 30, 40, 50, 65, 62, 55, 70],
-      teachers_count: [1, 2, 3, 3, 4, 4, 5, 4, 5, 6],
+      teachers_count: [1, 2, 3, 3, 4, 4, 5, 4, 5, 7],
       course_hours_per_month: [100, 120, 90, 140, 111],
       programming_hours_per_month: [30, 40, 35, 25, 40],
       web_design_hours_per_month: [20, 25, 17, 50, 22],
