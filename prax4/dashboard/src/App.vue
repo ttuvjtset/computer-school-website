@@ -49,6 +49,7 @@
             <div class="card-header">{{this.dashboard.courses_popularity_title}}</div>
             <div class="card-body p-0">
               <vue-frappe
+                v-if="loaded"
                 id="courses_popularity"
                 :labels="this.dashboard.courses_popularity_labels"
                 type="bar"
@@ -65,6 +66,7 @@
             <div class="card-header">{{this.dashboard.programing_hours_title}}</div>
             <div class="card-body p-0">
               <vue-frappe
+                v-if="loaded"
                 id="academic_hours"
                 type="bar"
                 :labels="this.dashboard.programming_hours_labels"
@@ -85,6 +87,7 @@
             <div class="card-header">{{this.dashboard.number_of_people_title}}</div>
             <div class="card-body p-0">
               <vue-frappe
+                v-if="loaded"
                 id="students_teachers_count"
                 type="line"
                 :labels="this.dashboard.number_of_people_labels"
@@ -103,6 +106,7 @@
             <div class="card-header">{{this.dashboard.students_age_title}}</div>
             <div class="card-body p-0">
               <vue-frappe
+                v-if="loaded"
                 id="students_age"
                 :labels="this.dashboard.students_age_labels"
                 type="pie"
@@ -118,6 +122,7 @@
             <div class="card-header">{{this.dashboard.students_gender_title}}</div>
             <div class="card-body">
               <vue-frappe
+                v-if="loaded"
                 id="students_gender"
                 :labels="this.dashboard.students_gender_labels"
                 type="percentage"
@@ -145,7 +150,8 @@ export default {
   data() {
     return {
       dashboard: {},
-      kpis: []
+      kpis: [],
+      loaded: false
     };
   },
   methods: {
@@ -156,6 +162,7 @@ export default {
         })
         .then(data => {
           this.dashboard = data;
+          this.loaded = true;
         });
     },
     fetchKPIs() {
